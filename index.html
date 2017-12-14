@@ -14,30 +14,32 @@
 
 <body>
 <!-- HEADER -->
-    <header>
+    <header class="header">
         <nav>
             <ul class="menu">
-                <li class="menu__item"></li>
-                <li class="menu__item"></li>
-                <li class="menu__item"></li>
-                <li class="menu__item"></li>
+                <li class="menu__logo"><img src="assets/logo/dark.svg" alt=""></li>
+                <li class="menu__item">Home</li>
+                <li class="menu__item">Team</li>
+                <li class="menu__item">Contact</li>
             </ul>
         </nav>
 
         <div class="inputForm">
-            <p>ICO starts in:</p>
-            <div class="inputForm__timer">05d</div>
-            <span>:</span>
-            <div class="inputForm__timer">20h</div>
-            <span>:</span>
-            <div class="inputForm__timer">30m</div>
-            <span>:</span>
-            <div class="inputForm__timer">15s</div>
-            <h3>In hac habitasse platea dolor dictumst lorem ipsum.</h3>
-            <p>Subscribe and get the lastes information </p>
-            <input placeholder="Enter your email" type="text">
-            <button>
-                <i class="btn btn--short"></i>
+            <p class="timer--text">ICO starts in:</p>
+            <div class="inputForm__timer">
+                <div class="inputForm__timer-item">05d</div>
+                <span>:</span>
+                <div class="inputForm__timer-item">20h</div>
+                <span>:</span>
+                <div class="inputForm__timer-item">30m</div>
+                <span>:</span>
+                <div class="inputForm__timer-item">15s</div>
+            </div>
+            <h1>In hac habitasse platea dolor dictumst lorem ipsum.</h1>
+            <p class="inputForm--text">Subscribe and get the lastes information </p>
+            <input class="inputForm__input" placeholder="Enter your email" type="text">
+            <button class="btn btn--short">
+               <img src="assets/Icon/Subscribe@1x.svg" alt="">
             </button>
         </div>
         <div class="videoBox">
@@ -120,6 +122,7 @@
     </footer>
 
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/moment.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
