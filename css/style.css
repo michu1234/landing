@@ -92,6 +92,11 @@ h1 {
   nav {
       background: #ffffff;
       height: 70px;
+      display: flex;
+  }
+
+  ul {
+    padding: 0;
   }
 
 
@@ -100,12 +105,16 @@ h1 {
         border-radius: 50px;
         border: none;
         background: #38a5db;
+        color: #fffefe;
+        font-family: OpenSans;
+        font-size: 1.6rem;
+        text-align: center;
   }
 
   /* // 4. Layout */
 
 .header {
-  height: 100vh;
+
   background: #2e3cb0;
   background-image: url(../assets/BG/Shape1@1x.svg),
                     url(../assets/BG/Shape2@1x.svg);
@@ -114,10 +123,19 @@ h1 {
   background-position: top left, top left;
 }
 
+.team {
+  text-align: center;
+}
+
+footer {
+  background: linear-gradient(to bottom, #3846b4 1%,#243193 100%);
+  text-align: right; 
+}
 
   /* // 5. Block + element */
 
   .menu {
+      flex: 1;
       display: flex;
       list-style: none;
       color: #1c2084;
@@ -130,15 +148,20 @@ h1 {
     visibility: hidden;
   }
   .menu__logo{
-      margin: auto auto auto calc(132*100%/1440);
-
+       margin: auto auto auto calc(132*100%/1440);
   }
+.header__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .inputForm {
   margin-left: calc(132*100%/1440);
 }
 
 .inputForm__input {
+  flex: 1,1;
   width: 480px;
   height: 50px;
   background: #ffffff;
@@ -154,11 +177,13 @@ h1 {
 
 .inputForm__timer {
   display: flex;
+  max-width: 370px;
   justify-content: space-between;
   font-family: OpenSans;
   font-size: 2.5rem;
   line-height: 49px;
   color: #8186f4;
+  margin-bottom: 45px;
 }
 
 .inputForm__timer-item {
@@ -170,10 +195,120 @@ h1 {
   text-align: center;
 
 }
+.videoBox {
+  flex: 1,1;
+  /* margin-right: calc(139*100%/1440); */
+}
+
+.videoBox__image {
+  margin-top: 160px;
+  max-width: 450px;
+  margin-right: calc(139*100%/1440);
+  margin-bottom: 46px;
+}
+
+.videoBox__player {
+  position: relative;
+}
+
+.videoBox__subheader {
+  margin-left: auto;
+  margin-right: calc(139*100%/1440);
+  max-width: 502px;
+  height: 32px;
+  color: #2e93d2;
+  font-family: OpenSans;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.videoBox__socialmedia {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: calc(139*100%/1440);
+  margin-bottom: 56px;
+  max-width: 264px;
+  height: 35px;
+}
+
+.videoBox__socialmedia-item {
+  display: inline-block;
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  margin-left: calc(132*100%/1440);
+  margin-right: calc(139*100%/1440);
+}
+
+.team__list-description {
+  width: 270px;
+  height: 114px;
+  color: #45505f;
+  font-family: SourceSansPro;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 96.46px;
+  height: 38.66px;
+  margin-left: calc(139*100%/1440);
+
+}
+.footer__logo-image {
+  margin-top: 46px;
+}
+
+.footer__header {
+  color: #fffefe;
+  font-family: OpenSans;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.footer__email {
+  text-align: center;
+  color: #0f80fe;
+  font-family: OpenSans;
+  font-size: 2rem;
+}
+
+.footer__description {
+  max-width: 290px;
+  text-align: center;
+  color: #ffffff;
+  font-family: OpenSans;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.footer__nav {
+  color: #ffffff;
+  font-family: OpenSans;
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__nav-item{
+  list-style: none;
+  padding: 0 25px 0 25px;
+}
+
+.footer__nav-item:not(:first-child):not(:last-child) {
+  border-left: 2px solid #0097ff;
+  border-right: 2px solid #0097ff;
+}
 
 /* // 6. Modifier */
 
 .timer--text {
+  margin-top: 63px;
   color: #2e93d2;
   font-family: OpenSans;
   font-size: 2rem;
@@ -198,6 +333,21 @@ h1 {
   height: 50px;
   vertical-align: top;
   margin-left: -50px;
+}
+
+.btn--wide {
+  width: 220px;
+  height: 46px;
+  margin-right: calc(139*100%/1440);
+}
+
+.btn--round {
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: 55%;
+  left: 40%;
 }
 
   /* // 9. Media Queries */
