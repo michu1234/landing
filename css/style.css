@@ -12,6 +12,7 @@ Table of contents
 // 9. Media Queries
  */
 
+
 /* // Variables 
 
 html {
@@ -28,30 +29,27 @@ html {
 */
 
 
-
 /* //2. Fonts Faces*/
 
-  @font-face {
-    font-family: 'OpenSans';
-    src: url('../assets/Font/OpenSans-Regular.ttf');
-  }
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../assets/Font/OpenSans-Regular.ttf');
+}
 
 
+/* // 3. Base */
 
-  /* // 3. Base */
-
-  html, body {
-      font-size: 62.5%;
-      max-width: 1440px;
-  }
+html,
+body {
+  font-size: 62.5%;
+  max-width: 1440px;
+}
 
 h1 {
   max-width: 570px;
-  
   color: #ffffff;
   font-family: OpenSans;
   font-size: 4.1rem;
-  text-align: left;
 }
 
 h3 {
@@ -68,39 +66,40 @@ h4 {
   text-align: center;
 }
 
-  nav {
-      background: #ffffff;
-      height: 70px;
-      display: flex;
-  }
+nav {
+  background: #ffffff;
+  height: 70px;
+  display: flex;
+}
 
-  ul {
-    padding: 0;
-  }
+ul {
+  padding: 0;
+}
 
-  form {
-    display: flex;
-  }
+form {
+  display: flex;
+}
 
 
-  /* // 6. Modifier */
-  .btn {
-        border-radius: 50px;
-        border: none;
-        background: #38a5db;
-        color: #fffefe;
-        font-family: OpenSans;
-        font-size: 1.6rem;
-        text-align: center;
-  }
+/* // 6. Modifier */
 
-  /* // 4. Layout */
+.btn {
+  border-radius: 50px;
+  border: none;
+  background: #38a5db;
+  color: #fffefe;
+  font-family: OpenSans;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+
+/* // 4. Layout */
 
 .header {
-
+  text-align: center;
   background: #2e3cb0;
-  background-image: url(../assets/BG/Shape1@1x.svg),
-                    url(../assets/BG/Shape2@1x.svg);
+  background-image: url(../assets/BG/Shape1@1x.svg), url(../assets/BG/Shape2@1x.svg);
   background-repeat: no-repeat, no-repeat;
   /* background-size: contain; */
   background-position: top left, top left;
@@ -114,28 +113,32 @@ h4 {
 }
 
 footer {
-  background: linear-gradient(to bottom, #3846b4 1%,#243193 100%);
-  text-align: right; 
+  background: linear-gradient(to bottom, #3846b4 1%, #243193 100%);
+  padding-top: 50px;
 }
 
-  /* // 5. Block + element */
 
-  .menu {
-      flex: 1;
-      display: flex;
-      list-style: none;
-      color: #1c2084;
-      font-family: OpenSans;
-      font-size: 1.6rem;
-      text-align: left;
-      margin-right: calc(132*100%/1440);
-  }
-  .menu__item {
-    visibility: hidden;
-  }
-  .menu__logo{
-       margin: auto auto auto calc(132*100%/1440);
-  }
+/* // 5. Block + element */
+
+.menu {
+  flex: 1;
+  display: flex;
+  list-style: none;
+  color: #1c2084;
+  font-family: OpenSans;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-right: calc(132*100%/1440);
+}
+
+.menu__item {
+  visibility: hidden;
+}
+
+.menu__logo {
+  margin: auto auto auto calc(132*100%/1440);
+}
+
 .header__item {
   display: flex;
   flex-wrap: wrap;
@@ -143,7 +146,7 @@ footer {
 }
 
 .inputForm {
-  flex: 1,1;
+  flex: 1, 1;
   margin-left: calc(132*100%/1440);
   margin-right: calc(132*100%/1440);
   display: flex;
@@ -183,11 +186,10 @@ footer {
   border: 1px solid #8186f4;
   border-radius: 4px;
   color: #fffefe;
-  text-align: center;
-
 }
+
 .videoBox {
-  flex: 1,1;
+  flex: 1, 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,16 +198,16 @@ footer {
 }
 
 .videoBox__image {
-  margin-top: 160px;
+ 
   width: 100%;
   height: auto;
   margin-right: calc(132*100%/1440);
-  margin-bottom: 46px;
+
 }
 
 .videoBox__player {
   position: relative;
-  flex:1,1,450px;
+  flex: 1, 1, 450px;
 }
 
 .videoBox__subheader {
@@ -216,7 +218,6 @@ footer {
   color: #2e93d2;
   font-family: OpenSans;
   font-size: 2rem;
-  text-align: right;
 }
 
 .videoBox__socialmedia {
@@ -260,13 +261,17 @@ footer {
 }
 
 .footer__logo {
-  width: 96.46px;
-  height: 38.66px;
-  margin-left: calc(139*100%/1440);
-
+  /* margin-left: calc(139*100%/1440); */
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .footer__logo-image {
-  margin-top: 46px;
+  /* margin-right: auto; */
+  margin-bottom: 50px;
+  width: 96.46px;
 }
 
 .footer__header {
@@ -281,6 +286,7 @@ footer {
   color: #0f80fe;
   font-family: OpenSans;
   font-size: 2rem;
+  margin: 80px auto;
 }
 
 .footer__description {
@@ -289,7 +295,7 @@ footer {
   color: #ffffff;
   font-family: OpenSans;
   font-size: 1.5rem;
-  margin: 0 auto;
+  margin: 60px auto;
 }
 
 .footer__nav {
@@ -301,7 +307,7 @@ footer {
   justify-content: center;
 }
 
-.footer__nav-item{
+.footer__nav-item {
   list-style: none;
   padding: 0 25px 0 25px;
 }
@@ -311,6 +317,7 @@ footer {
   border-right: 2px solid #0097ff;
 }
 
+
 /* // 6. Modifier */
 
 .timer--text {
@@ -318,33 +325,30 @@ footer {
   color: #2e93d2;
   font-family: OpenSans;
   font-size: 2rem;
-  text-align: left;
 }
 
 .inputForm--text {
-  border-radius: NaNpx;
+  padding-bottom: 15px;
   max-width: 570px;
   height: 26px;
   color: #ffffff;
   font-family: OpenSans;
-  font-size: 17.0px;
-  font-style: normal;
-  font-stretch: normal;
-  font-weight: 400;
-  text-align: left;
+  font-size: 1.7rem;
 }
 
 .btn--short {
   width: 59px;
+  flex-shrink: 0;
   height: 51px;
   vertical-align: top;
-  margin-left: -50px;
+  margin-left: -40px;
 }
 
 .btn--wide {
   width: 220px;
   height: 46px;
   margin-right: calc(132*100%/1440);
+  margin-left: calc(132*100%/1440);
 }
 
 .btn--round {
@@ -352,17 +356,32 @@ footer {
   width: 54px;
   height: 54px;
   position: absolute;
-  top: 55%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-  /* // 9. Media Queries */
-@media screen and (min-width: 520px){
-   .menu__item {
-        visibility: visible;
-        justify-content: flex-end;
-        align-self: center;
-        padding: 0 5px 0 5px;
-        height: 22px;
-    }
+
+/* // 9. Media Queries */
+
+@media screen and (min-width: 520px) {
+  .menu__item {
+    visibility: visible;
+    justify-content: flex-end;
+    align-self: center;
+    padding: 0 5px 0 5px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 676px) {
+ .timer--text, h1, .inputForm--text{
+   text-align: left;
+ }
+ .videoBox__subheader  {
+   text-align: right;
+ }
+ .btn--wide {
+   margin-left: auto;
+ }
 }
