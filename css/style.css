@@ -17,7 +17,7 @@ Table of contents
 html {
 --btn_background: #38a5db;
 --margin-left: calc(132*100%/1440);
---margin-right: calc(139*100%/1440);
+--margin-right: calc(132*100%/1440);
 
 
 
@@ -31,46 +31,11 @@ html {
 
 /* //2. Fonts Faces*/
 
-@font-face {
-    font-family: 'OpenSans-Bold';
-    src: url('OpenSans-Bold.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-BoldItalic';
-    src: url('OpenSans-BoldItalic.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-ExtraBold';
-    src: url('OpenSans-ExtraBold.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-ExtraBoldItalic';
-    src: url('OpenSans-ExtraBoldItalic.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-Italic';
-    src: url('OpenSans-Italic.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-Light';
-    src: url('OpenSans-Light.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-LightItalic';
-    src: url('OpenSans-LightItalic.ttf') format('ttf');
-  }
   @font-face {
     font-family: 'OpenSans';
-    src: url('OpenSans-Regular.ttf') format('ttf');
+    src: url('../assets/Font/OpenSans-Regular.ttf');
   }
-  @font-face {
-    font-family: 'OpenSans-SemiBold';
-    src: url('OpenSans-SemiBold.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'OpenSans-SemiBoldItalic';
-    src: url('OpenSans-SemiBoldItalic.ttf') format('ttf');
-  }
+
 
 
   /* // 3. Base */
@@ -82,11 +47,25 @@ html {
 
 h1 {
   max-width: 570px;
-  height: 128px;
+  
   color: #ffffff;
   font-family: OpenSans;
   font-size: 4.1rem;
   text-align: left;
+}
+
+h3 {
+  color: #1088d3;
+  font-family: OpenSans;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h4 {
+  color: #001225;
+  font-family: OpenSans;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
   nav {
@@ -97,6 +76,10 @@ h1 {
 
   ul {
     padding: 0;
+  }
+
+  form {
+    display: flex;
   }
 
 
@@ -125,6 +108,9 @@ h1 {
 
 .team {
   text-align: center;
+  color: #1b1f82;
+  font-family: OpenSans;
+  font-size: 2rem;
 }
 
 footer {
@@ -142,7 +128,7 @@ footer {
       font-family: OpenSans;
       font-size: 1.6rem;
       text-align: left;
-      margin-right: calc(139*100%/1440);
+      margin-right: calc(132*100%/1440);
   }
   .menu__item {
     visibility: hidden;
@@ -157,12 +143,17 @@ footer {
 }
 
 .inputForm {
+  flex: 1,1;
   margin-left: calc(132*100%/1440);
+  margin-right: calc(132*100%/1440);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .inputForm__input {
-  flex: 1,1;
-  width: 480px;
+  flex-basis: 480px;
+  max-width: 480px;
   height: 50px;
   background: #ffffff;
   border: none;
@@ -187,7 +178,7 @@ footer {
 }
 
 .inputForm__timer-item {
-  width: 70px;
+  flex-basis: 70px;
   height: 49px;
   border: 1px solid #8186f4;
   border-radius: 4px;
@@ -197,18 +188,24 @@ footer {
 }
 .videoBox {
   flex: 1,1;
-  /* margin-right: calc(139*100%/1440); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: calc(132*100%/1440);
+  margin-right: calc(132*100%/1440);
 }
 
 .videoBox__image {
   margin-top: 160px;
-  max-width: 450px;
-  margin-right: calc(139*100%/1440);
+  width: 100%;
+  height: auto;
+  margin-right: calc(132*100%/1440);
   margin-bottom: 46px;
 }
 
 .videoBox__player {
   position: relative;
+  flex:1,1,450px;
 }
 
 .videoBox__subheader {
@@ -227,7 +224,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
-  margin-right: calc(139*100%/1440);
+  margin-right: calc(132*100%/1440);
   margin-bottom: 56px;
   max-width: 264px;
   height: 35px;
@@ -239,18 +236,27 @@ footer {
 
 .team__list {
   display: flex;
+  list-style: none;
   justify-content: space-between;
   margin-left: calc(132*100%/1440);
-  margin-right: calc(139*100%/1440);
+  margin-right: calc(132*100%/1440);
 }
 
 .team__list-description {
-  width: 270px;
-  height: 114px;
+  height: 115px;
+  line-height: 2.7rem;
   color: #45505f;
   font-family: SourceSansPro;
   font-size: 1.7rem;
   text-align: center;
+}
+
+.team__profile {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  padding: 6px 16px 6px 16px;
 }
 
 .footer__logo {
@@ -317,7 +323,7 @@ footer {
 
 .inputForm--text {
   border-radius: NaNpx;
-  width: 570px;
+  max-width: 570px;
   height: 26px;
   color: #ffffff;
   font-family: OpenSans;
@@ -329,8 +335,8 @@ footer {
 }
 
 .btn--short {
-  width: 158px;
-  height: 50px;
+  width: 59px;
+  height: 51px;
   vertical-align: top;
   margin-left: -50px;
 }
@@ -338,7 +344,7 @@ footer {
 .btn--wide {
   width: 220px;
   height: 46px;
-  margin-right: calc(139*100%/1440);
+  margin-right: calc(132*100%/1440);
 }
 
 .btn--round {

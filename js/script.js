@@ -21,12 +21,74 @@ window.onload = function (e) {
                 m = moment.duration(duration).minutes(),
                 s = moment.duration(duration).seconds();
 
-            daysPlaceholder.innerHTML = d + "d";
-            hourPlaceholder.innerHTML = h + "h";
-            minutesPlaceholder.innerHTML = m + "m";
-            secondsPlaceholder.innerHTML = s + "s";
+            if (d < 10) {
+                daysPlaceholder.innerHTML = "0" + d + "d";
+            }else{
+                daysPlaceholder.innerHTML = d + "d";
+            } 
+            if (h < 10) {
+                hourPlaceholder.innerHTML = "0" + h + "h";
+            }else{
+                hourPlaceholder.innerHTML =  h + "h";
+            } 
+            if (m < 10) {
+                minutesPlaceholder.innerHTML = "0" + m + "m";
+            }else{
+                minutesPlaceholder.innerHTML = m + "m";
+            } 
+            if (s < 10) {
+                secondsPlaceholder.innerHTML = "0" + s + "s";
+            }else{
+                secondsPlaceholder.innerHTML = s + "s";
+            }    
+          
+        
         }, interval);
 
     }
 
 };
+
+
+
+window.addEventListener("resize", runCarousel);
+window.addEventListener("load", runCarousel);
+
+function runCarousel() {
+        $('.team__list').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1424,
+                    settings: "unslick"
+                  },
+                {
+                    breakpoint: 1224,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
+                      dots: true
+                    }
+                  },
+                  {
+                    breakpoint: 990,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                    }
+                  },
+                  {
+                    breakpoint: 690,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  }
+            ]
+          });
+}
