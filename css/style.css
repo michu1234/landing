@@ -52,6 +52,11 @@ h1 {
   font-size: 4.1rem;
 }
 
+h2 {
+  margin-bottom: 50px;
+  }
+
+
 h3 {
   color: #1088d3;
   font-family: OpenSans;
@@ -69,7 +74,10 @@ h4 {
 nav {
   background: #ffffff;
   height: 70px;
+  width: 100%;
+  position: fixed;
   display: flex;
+  z-index: 2;
 }
 
 ul {
@@ -78,6 +86,8 @@ ul {
 
 form {
   display: flex;
+  margin-right: calc(132*100%/1440);
+  margin-left: calc(132*100%/1440);
 }
 
 
@@ -110,6 +120,7 @@ form {
   color: #1b1f82;
   font-family: OpenSans;
   font-size: 2rem;
+  padding: 80px 0 80px 0;
 }
 
 footer {
@@ -198,21 +209,20 @@ footer {
 }
 
 .videoBox__image {
- 
   width: 100%;
   height: auto;
-  margin-right: calc(132*100%/1440);
-
 }
 
 .videoBox__player {
   position: relative;
   flex: 1, 1, 450px;
+  margin-right: calc(139*100%/1440);
+  margin-left: calc(139*100%/1440);
 }
 
 .videoBox__subheader {
-  margin-left: auto;
   margin-right: calc(139*100%/1440);
+  margin-left: calc(139*100%/1440);
   max-width: 502px;
   height: 32px;
   color: #2e93d2;
@@ -224,8 +234,8 @@ footer {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: calc(132*100%/1440);
+  margin-right: calc(139*100%/1440);
+  margin-left: calc(139*100%/1440);
   margin-bottom: 56px;
   max-width: 264px;
   height: 35px;
@@ -243,13 +253,17 @@ footer {
   margin-right: calc(132*100%/1440);
 }
 
+.team__list-item {
+  margin: 0 10px 0 10px;
+}
+
 .team__list-description {
-  height: 115px;
   line-height: 2.7rem;
   color: #45505f;
   font-family: SourceSansPro;
   font-size: 1.7rem;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .team__profile {
@@ -261,7 +275,6 @@ footer {
 }
 
 .footer__logo {
-  /* margin-left: calc(139*100%/1440); */
   text-align: left;
   display: flex;
   flex-wrap: wrap;
@@ -269,6 +282,8 @@ footer {
 }
 
 .footer__logo-image {
+  margin-left: calc(132*100%/1440);
+  margin-right: calc(132*100%/1440);
   /* margin-right: auto; */
   margin-bottom: 50px;
   width: 96.46px;
@@ -279,6 +294,8 @@ footer {
   font-family: OpenSans;
   font-size: 1.6rem;
   text-align: center;
+  padding-top: 40px;
+  margin-bottom: 20px
 }
 
 .footer__email {
@@ -286,7 +303,7 @@ footer {
   color: #0f80fe;
   font-family: OpenSans;
   font-size: 2rem;
-  margin: 80px auto;
+  margin: 0 auto;
 }
 
 .footer__description {
@@ -295,7 +312,7 @@ footer {
   color: #ffffff;
   font-family: OpenSans;
   font-size: 1.5rem;
-  margin: 60px auto;
+  margin: 40px auto 100px auto;
 }
 
 .footer__nav {
@@ -309,7 +326,8 @@ footer {
 
 .footer__nav-item {
   list-style: none;
-  padding: 0 25px 0 25px;
+  flex-grow: 0;
+  flex-basis: 300px;
 }
 
 .footer__nav-item:not(:first-child):not(:last-child) {
@@ -317,11 +335,20 @@ footer {
   border-right: 2px solid #0097ff;
 }
 
+.footer__copyright {
+  color: #ffffff;
+  font-family: OpenSans;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 30px 0 30px 0;
+  margin: 0;
+}
+
 
 /* // 6. Modifier */
 
 .timer--text {
-  margin-top: 63px;
+  margin-top: 133px;
   color: #2e93d2;
   font-family: OpenSans;
   font-size: 2rem;
@@ -341,7 +368,7 @@ footer {
   flex-shrink: 0;
   height: 51px;
   vertical-align: top;
-  margin-left: -40px;
+  margin-left: -58px;
 }
 
 .btn--wide {
@@ -364,6 +391,9 @@ footer {
 
 /* // 9. Media Queries */
 
+
+
+
 @media screen and (min-width: 520px) {
   .menu__item {
     visibility: visible;
@@ -374,6 +404,16 @@ footer {
   }
 }
 
+@media screen and (min-width: 600px){
+  .btn--wide {
+    margin-left: auto;
+  }
+  .footer__logo {
+   margin-left: calc(139*100%/1440);
+   margin-right: calc(139*100%/1440);
+  }
+}
+
 @media screen and (min-width: 676px) {
  .timer--text, h1, .inputForm--text{
    text-align: left;
@@ -381,7 +421,5 @@ footer {
  .videoBox__subheader  {
    text-align: right;
  }
- .btn--wide {
-   margin-left: auto;
- }
+
 }
