@@ -1,3 +1,6 @@
+
+// RUN COUNTDOWN TIMER
+
 window.onload = function (e) {
 
     // SET DATE TO COUNTDOWND...
@@ -11,84 +14,82 @@ window.onload = function (e) {
     minutesPlaceholder = document.querySelector(".inputForm__timer-item:nth-of-type(3)");
     secondsPlaceholder = document.querySelector(".inputForm__timer-item:nth-of-type(4)");
 
-
     if (diffTime > 0) {
         setInterval(function () {
 
             duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
-            var d = moment.duration(duration).days(),
+            let d = moment.duration(duration).days(),
                 h = moment.duration(duration).hours(),
                 m = moment.duration(duration).minutes(),
                 s = moment.duration(duration).seconds();
 
             if (d < 10) {
                 daysPlaceholder.innerHTML = "0" + d + "d";
-            }else{
+            } else {
                 daysPlaceholder.innerHTML = d + "d";
-            } 
+            }
             if (h < 10) {
                 hourPlaceholder.innerHTML = "0" + h + "h";
-            }else{
-                hourPlaceholder.innerHTML =  h + "h";
-            } 
+            } else {
+                hourPlaceholder.innerHTML = h + "h";
+            }
             if (m < 10) {
                 minutesPlaceholder.innerHTML = "0" + m + "m";
-            }else{
+            } else {
                 minutesPlaceholder.innerHTML = m + "m";
-            } 
+            }
             if (s < 10) {
                 secondsPlaceholder.innerHTML = "0" + s + "s";
-            }else{
+            } else {
                 secondsPlaceholder.innerHTML = s + "s";
-            }    
-          
-        
+            }
+
+
         }, interval);
 
     }
 
 };
 
-
+// RUN SLICK SLIDER WITH JQUERY
 
 window.addEventListener("resize", runCarousel);
 window.addEventListener("load", runCarousel);
 
 function runCarousel() {
-        $('.team__list').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-                {
-                    breakpoint: 1424,
-                    settings: "unslick"
-                  },
-                {
-                    breakpoint: 1224,
-                    settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 3,
-                      infinite: true,
-                      dots: true
-                    }
-                  },
-                  {
-                    breakpoint: 990,
-                    settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 2
-                    }
-                  },
-                  {
-                    breakpoint: 690,
-                    settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
-                    }
-                  }
-            ]
-          });
+    $('.team__list').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [{
+                breakpoint: 1424,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 1224,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 990,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 690,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 }
