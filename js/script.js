@@ -68,7 +68,7 @@ function runCarousel() {
                 settings: "unslick"
             },
             {
-                breakpoint: 1224,
+                breakpoint: 1340,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
