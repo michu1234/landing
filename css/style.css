@@ -42,7 +42,7 @@ html {
 html,
 body {
   font-size: 62.5%;
-  max-width: 1440px;
+  max-width: 100%;
 }
 
 h1 {
@@ -152,15 +152,15 @@ footer {
 
 .header__item {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-left: calc(120*100%/1440);
 }
 
 .inputForm {
-  flex: 1, 1;
-  margin-left: calc(132*100%/1440);
-  margin-right: calc(132*100%/1440);
   display: flex;
+  flex: 1;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -189,8 +189,6 @@ footer {
   line-height: 49px;
   color: #8186f4;
   margin-bottom: 45px;
-  margin-left: calc(132*100%/1440);
-  margin-right: calc(132*100%/1440);
 }
 
 .inputForm__timer-item {
@@ -202,12 +200,10 @@ footer {
 }
 
 .videoBox {
-  flex: 1, 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: calc(132*100%/1440);
-  margin-right: calc(132*100%/1440);
 }
 
 .videoBox__image {
@@ -217,19 +213,17 @@ footer {
 
 .videoBox__player {
   position: relative;
-  flex: 1, 1, 450px;
-  margin-right: calc(139*100%/1440);
-  margin-left: calc(139*100%/1440);
+  margin-top: 150px;
+  margin-right: 20px;
+
 }
 
 .videoBox__subheader {
-  margin-right: calc(139*100%/1440);
-  margin-left: calc(139*100%/1440);
-  max-width: 502px;
   height: 32px;
   color: #2e93d2;
   font-family: OpenSans;
   font-size: 2rem;
+  margin-right: calc(190*100%/1440);
 }
 
 .videoBox__socialmedia {
@@ -287,7 +281,7 @@ footer {
   margin-left: calc(132*100%/1440);
   margin-right: calc(132*100%/1440);
   /* margin-right: auto; */
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   width: 96.46px;
 }
 
@@ -314,7 +308,7 @@ footer {
   color: #ffffff;
   font-family: OpenSans;
   font-size: 1.5rem;
-  margin: 40px auto 100px auto;
+  margin: 40px auto 50px auto;
 }
 
 .footer__nav {
@@ -331,7 +325,7 @@ footer {
   list-style: none;
   box-sizing: border-box;
   flex: 0 1 120px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .footer__nav-item:not(:first-child) {
@@ -352,7 +346,7 @@ footer {
   font-family: OpenSans;
   font-size: 1.3rem;
   text-align: center;
-  padding: 30px 0 30px 0;
+  padding: 10px 0 10px 0;
   margin: 0;
 }
 
@@ -446,5 +440,17 @@ footer {
  .videoBox__subheader  {
    text-align: right;
  }
+ .inputForm__timer {
+   margin: 0;
+ }
+ 
+}
 
+@media screen and (max-width:622px) {
+  .footer__nav-item:not(:first-child) { 
+    flex-basis: 100px;
+   }
+  .footer__nav-item:nth-of-type(1) { 
+    flex-basis: 320px;
+   }
 }
