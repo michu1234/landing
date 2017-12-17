@@ -41,17 +41,18 @@ html {
 
 html{
   font-size: 62.5%;
+
 }
 
 body {
   max-width: 1440px;
   margin: 0 auto;
+  font-family: OpenSans;
 }
 
 h1 {
   max-width: 570px;
   color: #ffffff;
-  font-family: OpenSans;
   font-size: 4.1rem;
 }
 
@@ -62,14 +63,12 @@ h2 {
 
 h3 {
   color: #1088d3;
-  font-family: OpenSans;
   font-size: 1.8rem;
   text-align: center;
 }
 
 h4 {
   color: #001225;
-  font-family: OpenSans;
   font-size: 1.3rem;
   text-align: center;
 }
@@ -100,7 +99,6 @@ form {
   border: none;
   background: #38a5db;
   color: #fffefe;
-  font-family: OpenSans;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -115,13 +113,12 @@ form {
   background-repeat: no-repeat, no-repeat;
   /* background-size: contain; */
   background-position: top left, top left;
-  padding: 0 0 70px 0;
+  padding-bottom: 60px;
 }
 
 .team {
   text-align: center;
   color: #1b1f82;
-  font-family: OpenSans;
   font-size: 2rem;
   padding: 80px 0 80px 0;
 }
@@ -139,10 +136,9 @@ footer {
   display: flex;
   list-style: none;
   color: #1c2084;
-  font-family: OpenSans;
   font-size: 1.6rem;
   text-align: left;
-  margin-right: calc(132*100%/1440);
+  margin-right: calc(50*100%/1440);
 }
 
 .menu__item {
@@ -178,7 +174,6 @@ footer {
   padding: 20px;
   box-sizing: border-box;
   color: #566577;
-  font-family: OpenSans;
   font-size: 1.7rem;
   text-align: left;
   
@@ -187,7 +182,6 @@ footer {
 .inputForm__timer {
   display: flex;
   max-width: 370px;
-  font-family: OpenSans;
   font-size: 2.5rem;
   line-height: 49px;
   color: #8186f4;
@@ -208,7 +202,6 @@ footer {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .videoBox__image {
@@ -226,7 +219,6 @@ footer {
 .videoBox__subheader {
   height: 32px;
   color: #2e93d2;
-  font-family: OpenSans;
   font-size: 2rem;
   /* margin-right: calc(190*100%/1440); */
 }
@@ -235,10 +227,7 @@ footer {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-right: calc(139*100%/1440);
-  margin-left: calc(139*100%/1440);
   margin-bottom: 56px;
-  max-width: 264px;
   height: 35px;
 }
 
@@ -292,7 +281,6 @@ footer {
 
 .footer__header {
   color: #fffefe;
-  font-family: OpenSans;
   font-size: 1.6rem;
   text-align: center;
   padding-top: 40px;
@@ -302,7 +290,6 @@ footer {
 .footer__email {
   text-align: center;
   color: #0f80fe;
-  font-family: OpenSans;
   font-size: 2rem;
   margin: 0 auto;
 }
@@ -311,14 +298,12 @@ footer {
   max-width: 290px;
   text-align: center;
   color: #ffffff;
-  font-family: OpenSans;
   font-size: 1.5rem;
   margin: 40px auto 50px auto;
 }
 
 .footer__nav {
   color: #7883D5;
-  font-family: OpenSans;
   font-size: 1.3rem;
   text-align: center;
   display: flex;
@@ -348,7 +333,6 @@ footer {
 
 .footer__copyright {
   color: #7883D5;
-  font-family: OpenSans;
   font-size: 1.3rem;
   text-align: center;
   padding: 10px 0 10px 0;
@@ -361,7 +345,6 @@ footer {
 .timer--text {
   margin-top: 133px;
   color: #2e93d2;
-  font-family: OpenSans;
   font-size: 2rem;
 }
 
@@ -370,7 +353,6 @@ footer {
   max-width: 570px;
   height: 26px;
   color: #ffffff;
-  font-family: OpenSans;
   font-size: 1.7rem;
 }
 
@@ -404,8 +386,15 @@ footer {
     visibility: visible;
     justify-content: flex-end;
     align-self: center;
-    padding: 0 5px 0 5px;
+    padding: 0 20px 0 20px;
     height: 22px;
+  }
+  .videoBox__socialmedia {
+    margin-left: auto;
+    max-width: 300px;
+  }
+  .videoBox__subheader  {
+    text-align: right;
   }
 }
 
@@ -432,9 +421,7 @@ footer {
  .timer--text, h1, .inputForm--text{
    text-align: left;
  }
- .videoBox__subheader  {
-   text-align: right;
- }
+
  .inputForm__timer {
    margin: 0;
  } 
@@ -445,8 +432,11 @@ footer {
     flex-direction: row;
   }
   .videoBox__image {
-    margin-top: 180px;
+    margin-top: 175px;
     margin-left: calc(120*100%/1440);
+  }
+  .videoBox__socialmedia, .videoBox__subheader {
+    margin-right: -30px;
   }
 }
 
