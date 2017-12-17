@@ -39,10 +39,13 @@ html {
 
 /* // 3. Base */
 
-html,
-body {
+html{
   font-size: 62.5%;
-  max-width: 100%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -86,8 +89,7 @@ ul {
 
 form {
   display: flex;
-  margin-right: calc(132*100%/1440);
-  margin-left: calc(132*100%/1440);
+  position: relative;
 }
 
 
@@ -113,6 +115,7 @@ form {
   background-repeat: no-repeat, no-repeat;
   /* background-size: contain; */
   background-position: top left, top left;
+  padding: 0 0 70px 0;
 }
 
 .team {
@@ -156,6 +159,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: calc(120*100%/1440);
+  margin-right: calc(120*100%/1440);
 }
 
 .inputForm {
@@ -166,8 +170,7 @@ footer {
 }
 
 .inputForm__input {
-  flex-basis: 480px;
-  max-width: 480px;
+  width: 100%;
   height: 50px;
   background: #ffffff;
   border: none;
@@ -178,18 +181,20 @@ footer {
   font-family: OpenSans;
   font-size: 1.7rem;
   text-align: left;
+  
 }
 
 .inputForm__timer {
   display: flex;
   max-width: 370px;
-  justify-content: space-between;
   font-family: OpenSans;
   font-size: 2.5rem;
   line-height: 49px;
   color: #8186f4;
   margin-bottom: 45px;
+  justify-content: space-between;
 }
+
 
 .inputForm__timer-item {
   flex-basis: 70px;
@@ -209,13 +214,13 @@ footer {
 .videoBox__image {
   width: 100%;
   height: auto;
+  margin-top: 10%;
+  cursor: pointer;
 }
 
 .videoBox__player {
   position: relative;
-  margin-top: 150px;
-  margin-right: 20px;
-
+  width: 100%;
 }
 
 .videoBox__subheader {
@@ -223,7 +228,7 @@ footer {
   color: #2e93d2;
   font-family: OpenSans;
   font-size: 2rem;
-  margin-right: calc(190*100%/1440);
+  /* margin-right: calc(190*100%/1440); */
 }
 
 .videoBox__socialmedia {
@@ -374,7 +379,8 @@ footer {
   flex-shrink: 0;
   height: 51px;
   vertical-align: top;
-  margin-left: -58px;
+  position: absolute;
+  right: 0;
 }
 
 .btn--wide {
@@ -383,17 +389,6 @@ footer {
   margin-right: calc(132*100%/1440);
   margin-left: calc(132*100%/1440);
 }
-
-.btn--round {
-  border-radius: 50%;
-  width: 54px;
-  height: 54px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
 
 /* // 9. Media Queries */
 
@@ -442,8 +437,17 @@ footer {
  }
  .inputForm__timer {
    margin: 0;
- }
- 
+ } 
+}
+
+@media screen and (min-width: 900px){
+  .header__item {
+    flex-direction: row;
+  }
+  .videoBox__image {
+    margin-top: 180px;
+    margin-left: calc(120*100%/1440);
+  }
 }
 
 @media screen and (max-width:622px) {
