@@ -100,6 +100,17 @@ form
     display: flex;
 }
 
+a, 
+a:link, 
+a:visited, 
+a:hover, 
+a:active 
+{
+  color: #1c2084;
+  
+  text-decoration: none;
+}
+
 
 /* // 6. Modifier */
 
